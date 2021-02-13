@@ -19,9 +19,9 @@ class TAStreamer(DataGenerator):
         if "Name" in df:
             df.drop('Name',axis=1,inplace=True)
         _stock = Sdf.retype(df.copy())
-        _stock.get('cci_14')
-        _stock.get('rsi_14')
-        _stock.get('dx_14')
+        _stock.get('cci_14') #calculate the 14-day Commodity Channel Index (CCI)
+        _stock.get('rsi_14') #calculate the 14-day Relative Strength Index (RSI)
+        _stock.get('dx_14') #calculate the 14-day 
         _stock = _stock.dropna(how='any')
 
         min_max_scaler = preprocessing.MinMaxScaler((-1, 1))
