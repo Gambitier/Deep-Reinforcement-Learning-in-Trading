@@ -174,5 +174,7 @@ def World(filename=None,
 
 
 if __name__ == "__main__":
-    World(filename = r'./Data\\ZTS_data.csv',save_results=True, episodes=10, display=True,  train_test='train')
+    #World(filename = r'./Data\\ZTS_data.csv',save_results=True, episodes=10, display=True,  train_test='train')
     # World()
+    for filename in os.listdir('Data'):
+        World(filename = r'./Data\\'+filename, save_results=True, episodes=10, display=True,  train_test='train')
