@@ -45,7 +45,7 @@ def World(filename=None,
 
 
     try:
-        symbol = re.findall(r'Data\\([^_]+)',filename)[0]
+        symbol = re.findall(r'Data/([^_]+)',filename)[0]
     except:
         symbol = ""
 
@@ -177,4 +177,4 @@ if __name__ == "__main__":
     #World(filename = r'./Data\\ZTS_data.csv',save_results=True, episodes=10, display=True,  train_test='train')
     # World()
     for filename in os.listdir('Data'):
-        World(filename = r'./Data\\'+filename, save_results=True, episodes=10, display=True,  train_test='train')
+        World(filename = f'./Data/{filename}', save_results=True, episodes=10, display=True,  train_test='train')
