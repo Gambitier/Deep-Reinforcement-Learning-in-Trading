@@ -3,6 +3,7 @@ import pandas as pd
 import os
 import random
 import numpy as np
+np.warnings.filterwarnings('ignore', category=np.VisibleDeprecationWarning)                 
 import time
 from keras.layers import Dense, Lambda, Layer, Input, Flatten
 from keras.models import Sequential, Model
