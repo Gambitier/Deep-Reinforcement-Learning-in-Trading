@@ -29,7 +29,7 @@ class TAStreamer(DataGenerator):
         df_normalized = pd.DataFrame(np_scaled)
         df_normalized.columns = ['rsi_14', 'cci_14','dx_14','volume']
         df_normalized['bid'] = _stock['close'].values
-        df_normalized['ask'] = df_normalized['bid'] + spread
+        df_normalized['ask'] = df_normalized['bid'] + spread #why to add some constant over normalized range of values
         df_normalized['mid'] = (df_normalized['bid'] + df_normalized['ask'])/2
 
         split_len=int(split*len(df_normalized))
