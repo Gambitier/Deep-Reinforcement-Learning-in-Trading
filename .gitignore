@@ -8,7 +8,6 @@ env/
 .ipynb_checkpoints/Results-Copy1-checkpoint.ipynb
 .vscode/
 *.log
-*.csv
 *.pyc
 .idea/
 .ipynb_checkpoints/

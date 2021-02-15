@@ -162,6 +162,7 @@ def World(filename=None,
 
     if save_results:
         trades_df.to_csv(r'./Results/trade_list.csv')
+        action_policy_df.to_csv(r'./Results/action_policy.csv')
         action_policy_df.to_pickle(r'./Results/action_policy.pkl')
 
     if display:
@@ -174,7 +175,7 @@ def World(filename=None,
 
 
 if __name__ == "__main__":
-    #World(filename = r'./Data\\ZTS_data.csv',save_results=True, episodes=10, display=True,  train_test='train')
+    World(filename = f'./Data/BRITANNIANS_data.csv',save_results=True, episodes=10, display=True,  train_test='train')
     # World()
-    for filename in os.listdir('Data'):
-        World(filename = f'./Data/{filename}', save_results=True, episodes=10, display=True,  train_test='train')
+    #for filename in os.listdir('Data'):
+        #World(filename = f'./Data/{filename}', save_results=True, episodes=10, display=True,  train_test='train')
